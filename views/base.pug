@@ -8,13 +8,24 @@ head
     link(rel='stylesheet' href='/css/main.css')
     link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css')
     link(rel='icon' type='image/png' href='/img/virus.png') 
-  
+    script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-160607624-1')
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-160607624-1');
+
+
+
 //HEADER
 include _header
 
 //CONTENT
 block content
   h1 This is a placeholder heading
+
+//FOOTER 
+include _footer
 
 
 
