@@ -11,9 +11,10 @@ ul {
 
 .heading {
   margin-top: 5rem;
+  margin-bottom: 5rem;
   font-size: 3rem;
   text-align: center;
-  color: rgb(20, 20, 20);
+  color: rgb(11, 146, 94);
 }
 
 h1,
@@ -166,7 +167,6 @@ table {
   opacity: 0.95;
   width: 100%;
 }
-
 
 th {
   background: red;

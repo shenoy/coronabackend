@@ -7,14 +7,17 @@ block append head
 
 
 block content 
-  .container       
-    h1= cases.City
-    h3= cases.County
-    h3= cases.Country
-    p= `Origin : ${cases.Origin}`
-    p= cases.Date
-    p= cases.Summary
-    p= cases.Website
+  .row
+    .column
+      .card
+        h1= cases.City
+        h4= `Origin : ${cases.Origin}`
+        p
+          a(href=`${cases.Website}`) Website
+    .column
+      .card       
+        h4= `Summary : ${cases.Summary}`
+        
 
 
   section.section-map
