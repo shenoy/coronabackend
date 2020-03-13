@@ -2,11 +2,11 @@
 extends base
 
 block content
-  h2 Confirmed cases by date
+  h2 Confirmed cases in UK
     .container
-      table.ui.selectable.inverted.grey.table
+      table
         thead
-          tr
+          tr.ui.inverted.red.table
             th Country
             th County
             th City
@@ -26,7 +26,10 @@ block content
             td= i.Confirmed
             td= i.Dead
             td
-              a(href=`/case/${i.id}`).ui.primary.button Details
+              a.ui.primary.button Details
+
+  
+
 
 
 

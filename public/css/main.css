@@ -1,4 +1,4 @@
-div.container {
+.container {
   width: 90%;
   margin: 5%;
   font-size: 1.2rem;
@@ -95,6 +95,7 @@ li a:hover {
   margin-top: calc(0px - var(--section-rotate));
   width: 90%;
   margin: 5%;
+  overflow-x: auto;
 }
 
 #map {
@@ -157,4 +158,35 @@ body {
   padding: 16px;
   text-align: center;
   background-color: #f1f1f1;
+}
+
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  opacity: 0.95;
+  width: 100%;
+}
+
+
+th {
+  background: red;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background: rgb(207, 201, 201);
+}
+
+tr:nth-child(odd) {
+  background: white;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 10px;
+}
+
+article {
+  overflow-x: auto;
 }

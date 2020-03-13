@@ -25,7 +25,7 @@ exports.getDetail = async (req, res) => {
 };
 
 exports.getDeaths = async (req, res) => {
-  const deaths = await Case.find({ Dead: { $gte: 1 } });
+  const deaths = await Case.find({ Dead: { $gte: 1 } }).sort('-Date');
   res.status(200).render('deaths', {
     title: 'deaths',
     deaths
