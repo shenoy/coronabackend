@@ -1,0 +1,33 @@
+
+extends base
+
+block content
+  h2 Confirmed cases by date
+    .container
+      table.ui.selectable.inverted.grey.table
+        thead
+          tr
+            th Country
+            th County
+            th City
+            th Origin
+            th Date
+            th Confirmed
+            th Dead
+            th Details
+        each i in cases
+          tbody
+          tr
+            td= i.Country
+            td= i.County
+            td= i.City
+            td= i.Origin
+            td= i.Date
+            td= i.Confirmed
+            td= i.Dead
+            td
+              a(href=`/case/${i.id}`).ui.primary.button Details
+
+
+
+

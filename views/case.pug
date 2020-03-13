@@ -1,0 +1,26 @@
+extends base
+
+block append head
+  script(src='https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.js')
+  link(href='https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.css' rel='stylesheet')
+
+
+
+block content 
+  .container       
+    h1= cases.City
+    h3= cases.County
+    h3= cases.Country
+    p= `Origin : ${cases.Origin}`
+    p= cases.Date
+    p= cases.Summary
+    p= cases.Website
+
+
+  section.section-map
+    #map(data-location=`${JSON.stringify(cases.Location)}`)
+
+  script(src='/js/mapbox.js')
+
+
+
