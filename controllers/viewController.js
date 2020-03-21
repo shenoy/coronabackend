@@ -51,3 +51,9 @@ exports.getSignupForm = async (req, res) => {
     title: 'signup'
   });
 };
+
+exports.getChat = async (req, res) => {
+  res.status(200).render('chat', {
+    title: 'chat'
+  });
+};

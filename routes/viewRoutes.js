@@ -11,5 +11,6 @@ router.get('/total', viewController.getTotal);
 router.get('/deaths', viewController.getDeaths);
 router.get('/signup', viewController.getSignupForm);
 router.get('/login', viewController.getLoginForm);
+router.get('/chat', viewController.getChat);
 
 module.exports = router;
