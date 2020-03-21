@@ -5,7 +5,7 @@ export const login = async (email, password) => {
   try {
     const res = await axios({
       method: 'POST',
-      url: 'http://viruswatch.herokuapp.com/api/users/login/',
+      url: 'https://viruswatch.herokuapp.com/api/users/login/',
       data: {
         email,
         password
@@ -29,7 +29,7 @@ export const logout = async () => {
   try {
     const res = await axios({
       method: 'GET',
-      url: 'http://viruswatch.herokuapp.com/api/users/logout/'
+      url: 'https://viruswatch.herokuapp.com/api/users/logout/'
     });
 
     if (res.data.status === 'success') {
