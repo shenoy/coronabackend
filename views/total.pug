@@ -1,17 +1,17 @@
 extends base
 
 block content 
-  h2 Total Corona Virus Cases in UK
+  h5= `Total UK Cases on ${cases[0].Date}`
   .row
     .column
       .card
         h3 Confirmed
-        h1.blinking= cases[0].Confirmed      
+        h1= cases[0].Confirmed      
         p
           a(href='/').ui.button Details
     .column
       .card
         h3 Deaths
-        h1.blinking= cases[0].Dead
+        h1= cases[0].Dead
         p 
           a(href='/deaths').ui.button Details

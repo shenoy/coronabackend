@@ -93,7 +93,7 @@ exports.updateCase = async (req, res) => {
 exports.deleteCase = async (req, res) => {
   try {
     const deletedCase = await Case.findByIdAndDelete(req.params.id);
-    res.status(200).json({
+    res.status(204).json({
       status: 'success',
       message: 'deleted the file'
     });

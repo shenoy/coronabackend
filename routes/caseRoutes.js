@@ -1,25 +1,30 @@
-const express = require("express");
-const caseController = require("./../controllers/caseController");
+const express = require('express');
+const caseController = require('./../controllers/caseController');
+const authController = require('../controllers/authController');
 
 const router = express.Router();
 
 router
-  .route("/topDeadly")
+  .route('/topDeadly')
   .get(caseController.aliasTopCases, caseController.getAllCases);
 
-router.route("/stats").get(caseController.getCaseStats);
+router.route('/stats').get(caseController.getCaseStats);
 
 router
-  .route("/")
-  .get(caseController.getAllCases)
+  .route('/')
+  .get(authController.protect, caseController.getAllCases)
   .post(caseController.createCase);
 
 //router.param('id', caseController.checkID);
 
 router
-  .route("/:id")
+  .route('/:id')
   .get(caseController.getCase)
   .patch(caseController.updateCase)
-  .delete(caseController.deleteCase);
+  .delete(
+    authController.protect,
+    authController.restrictTo('admin'),
+    caseController.deleteCase
+  );
 
 module.exports = router;

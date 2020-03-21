@@ -1,14 +1,34 @@
 header
   ul
-    li
-      a(href='/total')
-        i.home.icon
-    li
-      a(href='/')
-        i.calendar.icon
-    li
-      a(href='/deaths')
-        i.heartbeat.icon        
+    if user
+      li
+        a(href='/total')
+          i.home.icon Total
+      li
+        a(href='/')
+          i.chart.line.icon Daily
+      li
+        a(href='/deaths')
+          i.chart.pie.icon Deaths
+      li
+        a.logout(href='/')
+          i.sign.out.alternate.icon Logout
+      li
+        a(href='')
+          i.user.icon= user.name.split(' ')[0]
+    else 
+      li
+        a(href='/total')
+          i.home.icon Total
+      li
+        a(href='/')
+          i.chart.line.icon Daily 
+      li
+        a(href='/deaths')
+          i.chart.pie.icon Deaths  
+      li
+        a(href='/login')
+          i.sign.in.alternate.icon Login       
 
 
-  .heading CORONAVIRUS UK LIVE TRACKER
+  .heading CORVID

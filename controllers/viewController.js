@@ -39,3 +39,15 @@ exports.getTotal = async (req, res) => {
     cases
   });
 };
+
+exports.getLoginForm = async (req, res) => {
+  res.status(200).render('login', {
+    title: 'login'
+  });
+};
+
+exports.getSignupForm = async (req, res) => {
+  res.status(200).render('signup', {
+    title: 'signup'
+  });
+};
