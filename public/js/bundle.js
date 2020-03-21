@@ -8389,7 +8389,7 @@ var login = /*#__PURE__*/function () {
             _context.next = 3;
             return (0, _axios.default)({
               method: 'POST',
-              url: 'http://localhost:8000/api/users/login/',
+              url: 'http://viruswatch.herokuapp.com/api/users/login/',
               data: {
                 email: email,
                 password: password
@@ -8441,7 +8441,7 @@ var logout = /*#__PURE__*/function () {
             _context2.next = 3;
             return (0, _axios.default)({
               method: 'GET',
-              url: 'http://localhost:8000/api/users/logout/'
+              url: 'http://viruswatch.herokuapp.com/api/users/logout/'
             });
 
           case 3:
@@ -8545,7 +8545,7 @@ var signup = /*#__PURE__*/function () {
             _context.next = 3;
             return (0, _axios.default)({
               method: 'POST',
-              url: 'http://localhost:8000/api/users/signup/',
+              url: 'http://viruswatch.herokuapp.com/api/users/signup/',
               data: {
                 name: name,
                 email: email,

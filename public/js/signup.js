@@ -5,7 +5,7 @@ export const signup = async (name, email, password, passwordConfirm) => {
   try {
     const res = await axios({
       method: 'POST',
-      url: 'http://localhost:8000/api/users/signup/',
+      url: 'http://viruswatch.herokuapp.com/api/users/signup/',
       data: {
         name,
         email,
