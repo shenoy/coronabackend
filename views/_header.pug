@@ -5,33 +5,42 @@ header
         a(href='/total')
           i.home.icon Total
       li
+        a(href='/deathChart')
+          i.chart.line.icon Region 
+      li
         a(href='/')
-          i.chart.line.icon Daily
+          i.calendar.icon Daily
       li
         a(href='/deaths')
-          i.chart.pie.icon Deaths
+          i.ambulance.icon Deaths
       li
         a(href='/chat')
-          i.chart.pie.icon Chat      
+          i.user.icon Chat      
       li
         a.logout(href='/')
           i.sign.out.alternate.icon Logout
       li
         a(href='')
           i.user.icon= user.name.split(' ')[0]
+      
     else 
       li
         a(href='/total')
           i.home.icon Total
       li
+        a(href='/deathChart')
+          i.chart.line.icon Region
+      li
         a(href='/')
-          i.chart.line.icon Daily 
+          i.calendar.icon Daily 
       li
         a(href='/deaths')
-          i.chart.pie.icon Deaths  
+          i.ambulance.icon Deaths  
       li
         a(href='/login')
-          i.sign.in.alternate.icon Login       
+          i.sign.in.alternate.icon Login
+      
+
 
 
   .heading CORVID

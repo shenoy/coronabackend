@@ -2,12 +2,14 @@ import '@babel/polyfill';
 import { login, logout } from './login';
 import { displayMap } from './mapbox';
 import { signup } from './signup';
+import { deathChart } from './deathChart';
 
 //DOM ELEMENTS
 const mapbox = document.getElementById('map');
 const loginForm = document.querySelector('.login');
 const logoutBtn = document.querySelector('.logout');
 const signupForm = document.querySelector('.signup');
+const ctx = document.getElementById('deathChart');
 
 //DELEGATION
 
@@ -35,7 +37,6 @@ if (loginForm) {
 
 if (mapbox) {
   const locations = JSON.parse(document.getElementById('map').dataset.location);
-  console.log(locations);
   displayMap(locations);
 }
 

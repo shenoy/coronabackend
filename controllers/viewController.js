@@ -57,3 +57,9 @@ exports.getChat = async (req, res) => {
     title: 'chat'
   });
 };
+
+exports.getDeathChart = async (req, res) => {
+  res.status(200).render('deathChart', {
+    title: 'deathChart'
+  });
+};
