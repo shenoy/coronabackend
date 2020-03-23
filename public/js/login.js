@@ -1,11 +1,16 @@
-import axios from 'axios';
-import { showAlert } from './alerts';
+//==============================ALERT=======================================================================
+const showAlert = (type, msg) => {
+  const markup = `<div class="alert alert--${type}">${msg}</div>`;
+  document.querySelector('body').insertAdjacentHTML('afterbegin', markup);
+};
 
-export const login = async (email, password) => {
+//==================================LOGIN================================================================
+
+const login = async (email, password) => {
   try {
     const res = await axios({
       method: 'POST',
-      url: 'https://viruswatch.herokuapp.com/api/users/login/',
+      url: 'http://localhost:8000/api/users/login/',
       data: {
         email,
         password
@@ -19,17 +24,18 @@ export const login = async (email, password) => {
       }, 1500);
     }
   } catch (err) {
+    console.log(err);
     showAlert('error', err.response.data.message);
   }
 };
 
 //===========================================LOGOUT PUBLIC=============================================
 
-export const logout = async () => {
+const logout = async () => {
   try {
     const res = await axios({
       method: 'GET',
-      url: 'https://viruswatch.herokuapp.com/api/users/logout/'
+      url: 'http://localhost:8000/api/users/logout/'
     });
 
     if (res.data.status === 'success') {
@@ -44,3 +50,14 @@ export const logout = async () => {
 };
 
 //=========================================================================================================
+document.querySelector('.login').addEventListener('submit', e => {
+  e.preventDefault();
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+  console.log('hello from login script');
+  login(email, password);
+});
+
+// document.querySelector('.logout').addEventListener('click', logout);
+
+//========================================================================================================

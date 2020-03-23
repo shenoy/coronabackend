@@ -1,45 +1,25 @@
 header
   ul
-    if user
-      li
-        a(href='/total')
-          i.home.icon Total
-      li
-        a(href='/deathChart')
-          i.chart.line.icon Region 
-      li
-        a(href='/')
-          i.calendar.icon Daily
-      li
-        a(href='/deaths')
-          i.ambulance.icon Deaths
-      li
-        a(href='/chat')
-          i.user.icon Chat      
-      li
-        a.logout(href='/')
-          i.sign.out.alternate.icon Logout
-      li
-        a(href='')
-          i.user.icon= user.name.split(' ')[0]
-      
-    else 
-      li
-        a(href='/total')
-          i.home.icon Total
-      li
-        a(href='/deathChart')
-          i.chart.line.icon Region
-      li
-        a(href='/')
-          i.calendar.icon Daily 
-      li
-        a(href='/deaths')
-          i.ambulance.icon Deaths  
-      li
-        a(href='/login')
-          i.sign.in.alternate.icon Login
-      
+
+    li
+      a(href='/total')
+        i.home.icon Total
+    li
+      a(href='/deathChart')
+        i.chart.line.icon Region 
+    li
+      a(href='/')
+        i.calendar.icon Daily
+    li
+      a(href='/deaths')
+        i.ambulance.icon Deaths
+    li
+      a(href='/chat')
+        i.user.icon Chat      
+
+
+
+
 
 
 

@@ -9,6 +9,8 @@ head
     link(href='https://fonts.googleapis.com/css?family=Orbitron&display=swap' rel='stylesheet')
     link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css')
     link(rel='icon' type='image/png' href='/img/virus2.png') 
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js')
     script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-160607624-1')
     script.
       window.dataLayer = window.dataLayer || [];
@@ -30,11 +32,10 @@ include _topbutton
 
 
 
-  //- script(src= 'https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js')
-  //- script(src='/js/mapbox.js')
-  //- script(src='/js/signup.js')
-  //- script(src='/js/login.js')
-  script(src='/js/bundle.js')
+    script(src='/js/mapbox.js')
+    script(src='/js/signup.js')
+    script(src='/js/login.js')
+    script(src='/js/deathChart.js')
 
 
 

@@ -1,31 +1,29 @@
-import Chart from 'chart.js';
+const myChart = document.getElementById('myChart');
 
-const ctx = document.getElementById('deathChart').getContext('2d');
-
-export const deathChart = new Chart(ctx, {
+const deathChart = new Chart(myChart, {
   type: 'horizontalBar',
   data: {
     labels: [
-      'Total',
+      'London',
+      'Southeast',
+      'Midlands',
+      'Southwest',
       'East Anglia',
       'Northwest',
-      'Southeast',
-      'London',
+      'Yorkshire & Northeast',
       'Scotland',
       'N.Ireland',
-      'Wales',
-      'Southwest',
-      'Midlands'
+      'Wales'
     ],
     datasets: [
       {
         label: 'Deaths',
-        data: [233, 5, 12, 28, 51, 6, 1, 3, 11, 36],
+        data: [102, 50, 47, 14, 7, 26, 11, 14, 2, 16],
         backgroundColor: 'black'
       },
       {
         label: 'Infections',
-        data: [5018, 147, 220, 340, 1221, 322, 86, 191, 140, 282],
+        data: [2189, 536, 624, 242, 274, 390, 368, 499, 148, 418],
         backgroundColor: 'red'
       }
     ]
