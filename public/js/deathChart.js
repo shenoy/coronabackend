@@ -18,12 +18,12 @@ const deathChart = new Chart(myChart, {
     datasets: [
       {
         label: 'Deaths',
-        data: [102, 50, 47, 14, 7, 26, 11, 14, 2, 16],
+        data: [116, 57, 53, 17, 7, 34, 19, 16, 4, 17],
         backgroundColor: 'black'
       },
       {
         label: 'Infections',
-        data: [2189, 536, 624, 242, 274, 390, 368, 499, 148, 418],
+        data: [2433, 590, 808, 278, 351, 496, 446, 584, 148, 478],
         backgroundColor: 'red'
       }
     ]
