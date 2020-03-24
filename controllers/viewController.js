@@ -52,12 +52,6 @@ exports.getSignupForm = async (req, res) => {
   });
 };
 
-exports.getChat = async (req, res) => {
-  res.status(200).render('chat', {
-    title: 'chat'
-  });
-};
-
 exports.getDeathChart = async (req, res) => {
   res.status(200).render('deathChart', {
     title: 'deathChart'
