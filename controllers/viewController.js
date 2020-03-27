@@ -51,9 +51,3 @@ exports.getSignupForm = async (req, res) => {
     title: 'signup'
   });
 };
-
-exports.getDeathChart = async (req, res) => {
-  res.status(200).render('deathChart', {
-    title: 'deathChart'
-  });
-};
