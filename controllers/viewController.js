@@ -33,7 +33,7 @@ exports.getDeaths = async (req, res) => {
 };
 
 exports.getTotal = async (req, res) => {
-  const cases = await Case.find().limit(10);
+  const cases = await Case.findOne({ _id: '5e6972939d68eb1e9983919c' });
   res.status(200).render('total', {
     title: 'total',
     cases
